@@ -7,6 +7,7 @@ const SIDEBAR_LINKS = [
   { id: 3, path: "/services", name: "Services" },
   { id: 4, path: "/contact", name: "Contact" },
   { id: 4, path: "/section", name: "Section" },
+  { id: 4, path: "/technology", name: "Technology" },
 ];
 
 const Sidebar = () => {

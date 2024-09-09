@@ -1,9 +1,6 @@
 import React from 'react'
-import Header from './Header'
 import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
-import About from '../About/About'
-import Section from '../section/Section'
 import Navbar from './Navbar'
 
 const Layout = () => {
