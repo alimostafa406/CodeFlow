@@ -13,5 +13,6 @@ export const theme = {
       'fs': '1px'
     },
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [
+  ],
 };

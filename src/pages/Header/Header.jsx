@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import ParticlesComponent from '../../Components/particles';
+import Section from '../section/Section';
 
 const Header = () => {
   return (
