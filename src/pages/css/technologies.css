@@ -1,0 +1,84 @@
+.technologies-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+  overflow: hidden; /* Hide any overflow from the scrollable area */
+}
+
+.technologies-heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.technologies-scroll {
+  display: flex;
+  gap: 20px; /* Adjusted for better spacing */
+  overflow-x: hidden; /* Hide the default scrollbar */
+  scroll-behavior: smooth;
+  width: 100%;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory; /* Snap to items */
+  cursor: grab; /* Change cursor to grab */
+  position: relative;
+}
+
+.technology-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px; /* Uniform width */
+  height: 150px; /* Uniform height */
+  background-color: #002244;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeIn 0.8s ease-in-out;
+  scroll-snap-align: center; /* Align items to the center of the scroll container */
+}
+
+.technology-icon {
+  font-size: 4rem; /* Larger icon size for better visibility */
+  color: white;
+  margin-bottom: 10px; /* Reduced margin for better spacing */
+}
+
+.technology-name {
+  font-size: 1.2rem; /* Uniform font size */
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .technologies-scroll {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .technology-item {
+    width: 120px; /* Adjusted for smaller screens */
+    height: 120px; /* Adjusted for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .technologies-scroll {
+    flex-direction: column;
+  }
+  .technology-item {
+    width: 100px; /* Further adjusted for very small screens */
+    height: 100px; /* Further adjusted for very small screens */
+  }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
