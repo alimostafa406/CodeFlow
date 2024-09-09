@@ -12,7 +12,7 @@ const SIDEBAR_LINKS = [
 
 const Sidebar = () => {
   return (
-    <div className="top-0 left-0 fixed z-10 bg-custom-dark text-white w-56 min-h-screen duration-300" id="sidebar">
+    <div className="top-0 left-0 fixed z-20 bg-custom-dark text-white w-56 min-h-screen duration-300" id="sidebar">
       <div className="p-4">
         <h1 className="text-2xl font-semibold">Dev Flow</h1>
         <nav className="flex-1 mt-4 ">

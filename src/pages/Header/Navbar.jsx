@@ -4,7 +4,7 @@ import logo from '../../assets/images/logo.gif';
 const Navbar = () => {
   
   return (
-    <div className="flex fixed">
+    <div className="flex fixed z-10">
       
       {/* Content */}
       <div className="flex-1 flex flex-col overflow-hidden xs:ml-4 xs:mr-4 -z-10">
