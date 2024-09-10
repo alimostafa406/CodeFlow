@@ -5,6 +5,9 @@ export const theme = {
     fontFamily: {
       Montserrat: "Montserrat",
     },
+    animation: {
+      'scroll-left': 'scrollLeft 30s linear infinite',
+    },
     colors: {
       'custom-dark': '#0F1120',
     },
@@ -14,5 +17,6 @@ export const theme = {
     },
   },
   plugins: [
+    require('tailwind-scrollbar-hide'),
   ],
 };
