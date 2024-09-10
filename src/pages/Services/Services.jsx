@@ -8,8 +8,8 @@ import ParticlesComponent from "../../Components/particles";
 
 const Services = () => {
   return (
-    <div className="services-page">
-      <ParticlesComponent /> {/* Background Effect */}
+    <div className="services-page h-screen">
+      <ParticlesComponent id="particles"/> {/* Background Effect */}
 
       <div className="services-content">
         {/* Text Column */}
