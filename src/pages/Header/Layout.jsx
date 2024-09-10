@@ -12,7 +12,6 @@ const Layout = () => {
     <div className='h-screen overflow-auto'>
       <Navbar/>
         <div className='w-full md-56 flex-row h-auto'>
-          <Sidebar/>
           <div className=''>
             <Outlet/>
           </div>
