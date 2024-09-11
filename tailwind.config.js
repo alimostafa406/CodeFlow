@@ -7,12 +7,13 @@ export const theme = {
     },
     animation: {
       'scroll-left': 'scrollLeft 30s linear infinite',
+      'scroll-right': 'scrollRight 30s linear infinite',
     },
     colors: {
       'custom-dark': '#0F1120',
     },
     screens: {
-      'xs': '350px', // Custom breakpoint for less than 640px
+      'xs': '320px', // Custom breakpoint for less than 640px
       'fs': '1px'
     },
   },

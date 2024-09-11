@@ -8,12 +8,12 @@ import ParticlesComponent from "../../Components/particles";
 
 const Services = () => {
   return (
-    <div className="services-page h-screen">
+    <div className="services-page min-h-screen">
       <ParticlesComponent id="particles"/> {/* Background Effect */}
 
-      <div className="services-content">
+      <div className="services-content flex md:flex-row lg:flex-row xs:flex-col">
         {/* Text Column */}
-        <div className="services-text">
+        <div className="services-text xs:mb-10">
           <p>
             DevFlow provides a wide range of software development services,
             tailored for businesses of all sizes. From custom software to advanced
@@ -24,7 +24,7 @@ const Services = () => {
         </div>
 
         {/* Images Column */}
-        <div className="services-grid">
+        <div className="services-grid xs:mb-30">
           <div className="services-item">
             <img src={WebDeveloper} alt="Web Developer" />
             <p>Web Developer</p>
