@@ -21,18 +21,16 @@ const Technologies = () => {
     <div className='technologies-container'>
       <h2 className='technologies-heading'>Technologies</h2>
       <motion.div
-        className='flex'
-        whileTap={{ cursor: 'grabbing' }} // Change cursor to grabbing on drag
-        drag='x'
-        dragConstraints={{ left: -500, right: 0 }} // Set constraints for horizontal drag
+        className='technologies-scroll'
+        animate={{ x: [0, -1000, 0] }} // Creates a continuous loop effect
+        transition={{ duration: 10, ease: 'linear', repeat: Infinity }}
       >
         {technologies.map((tech, index) => (
           <motion.div
             key={index}
-            className={`technology-item m-2 technology-item-${index + 1}`}
-            whileHover={{ scale: 1.2, backgroundColor: '#007bff' }} // Scale and color change on hover
-            transition={{ type: 'spring', stiffness: 300, damping: 10 }} // Smooth transition
-            layout
+            className='technology-item'
+            whileHover={{ scale: 1.2, rotate: 10, backgroundColor: '#007bff' }}
+            transition={{ type: 'spring', stiffness: 300, damping: 10 }}
           >
             <FontAwesomeIcon icon={tech.icon} className='technology-icon' />
             <span className='technology-name'>{tech.name}</span>

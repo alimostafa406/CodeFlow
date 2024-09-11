@@ -4,7 +4,7 @@
   align-items: center;
   padding: 40px;
   background-color: white;
-  overflow: hidden; /* Hide any overflow from the scrollable area */
+  overflow: hidden;
 }
 
 .technologies-heading {
@@ -15,40 +15,44 @@
 
 .technologies-scroll {
   display: flex;
-  gap: 20px; /* Adjusted for better spacing */
-  overflow-x: hidden; /* Hide the default scrollbar */
-  scroll-behavior: smooth;
+  gap: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scroll */
   width: 100%;
   padding: 10px 0;
   scroll-snap-type: x mandatory; /* Snap to items */
-  cursor: grab; /* Change cursor to grab */
   position: relative;
+  white-space: nowrap; /* Prevent wrapping */
+  perspective: 1000px; /* For 3D effects */
 }
 
 .technology-item {
-  display: flex;
+  display: inline-flex; /* Inline to allow horizontal scroll */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 150px; /* Uniform width */
-  height: 150px; /* Uniform height */
+  width: 150px;
+  height: 150px;
   background-color: #002244;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, background-color 0.3s ease;
-  animation: fadeIn 0.8s ease-in-out;
   scroll-snap-align: center; /* Align items to the center of the scroll container */
+  position: relative;
+  transform-style: preserve-3d; /* Enable 3D effects */
 }
 
 .technology-icon {
-  font-size: 4rem; /* Larger icon size for better visibility */
+  font-size: 4rem;
   color: white;
-  margin-bottom: 10px; /* Reduced margin for better spacing */
+  margin-bottom: 10px;
+  z-index: 2;
 }
 
 .technology-name {
-  font-size: 1.2rem; /* Uniform font size */
+  font-size: 1.2rem;
   color: white;
+  z-index: 2;
 }
 
 /* Responsive design */
@@ -58,8 +62,8 @@
     gap: 20px;
   }
   .technology-item {
-    width: 120px; /* Adjusted for smaller screens */
-    height: 120px; /* Adjusted for smaller screens */
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -68,17 +72,7 @@
     flex-direction: column;
   }
   .technology-item {
-    width: 100px; /* Further adjusted for very small screens */
-    height: 100px; /* Further adjusted for very small screens */
-  }
-}
-
-/* Keyframes for animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+    width: 100px;
+    height: 100px;
   }
 }
