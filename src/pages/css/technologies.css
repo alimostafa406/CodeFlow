@@ -76,3 +76,44 @@
     height: 100px;
   }
 }
+
+
+/* technologies.css */
+
+/* Animation keyframes for scrolling effect */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/* Apply animation to scrolling items */
+.scroll-left {
+  display: flex;
+  animation: scrollLeft 30s linear infinite;
+}
+
+/* Ensure items are displayed in a row and overflow hidden on wrapper */
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+  margin-top: 5rem;
+}
+
+.item {
+  flex-shrink: 0;
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  border-radius: 6px;
+  margin-right: 16px; /* Adjust margin as needed */
+}
