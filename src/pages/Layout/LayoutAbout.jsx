@@ -3,7 +3,6 @@ import logos from '../../assets/images/logos.gif'
 import bg2 from '../../assets/images/bg2.jpg'
 import Button from '@mui/material/Button';
 import '../css/About.css'
-import { Link } from 'react-router-dom';
 
 const LayoutAbout = () => {
   return (
@@ -11,9 +10,9 @@ const LayoutAbout = () => {
 
         <div className=" relative bg-cover bg-center h-[60vh]" style={{ backgroundImage: `url(${bg2})` }}>
         <div className="md:left-5 md:bottom-16 xs:left-5 xs:bottom-16 text-white absolute">
-            <Link to={'/contact'}>
-            <Button variant="contained" className="md:w-40 md:h-20 xs:w-32 xs:h-16">Know More</Button>
-            </Link>
+            
+            <Button variant="contained" className="md:w-40 md:h-20 xs:w-32 xs:h-16"><a href='#knowMore'>KNOW MORE</a></Button>
+
       </div>
         </div>
 
@@ -40,7 +39,7 @@ const LayoutAbout = () => {
             </div>
         </div>
 
-        <div className="bg-cover bg-center w-screen h-screen flex items-center justify-center" style={{ backgroundImage: `url(${bg2})` }}>
+        <div className="bg-cover bg-center w-screen h-screen flex items-center justify-center" style={{ backgroundImage: `url(${bg2})` }} id='knowMore'>
         <div className="story-section w-[100vw] relative flex justify-center items-center p-8">
                 <div className="story-content flex xs:flex-col md:flex-row gap-14 items-center justify-between min-w-[60vw] bg-black bg-opacity-50 p-8 rounded-lg">
                     <div className="story-text text-white max-w-md animate-slide-in-left">

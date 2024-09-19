@@ -29,10 +29,10 @@ const Navbar = () => {
 
               {/* Navigation Links for Desktop */}
               <nav className="hidden md:flex space-x-6 mr-10 text-lg">
-                <Link to={"/"}><a href="#" className="hover:text-indigo-400">Home</a></Link>
-                <Link to={"/about"}><a href="#" className="hover:text-indigo-400">About</a></Link>
-                <Link to={"/services"}><a href="#" className="hover:text-indigo-400">Services</a></Link>
-                <Link to={"/contact"}><a href="#" className="hover:text-indigo-400">Contact</a></Link>
+              <Link to={"/"} href="#" className="hover:text-indigo-400">Home</Link>
+                <Link to={"/about"} href="#" className="hover:text-indigo-400">About</Link>
+                <Link to={"/services"} href="#" className="hover:text-indigo-400">Services</Link>
+                <Link to={"/contact"} href="#" className="hover:text-indigo-400">Contact</Link>
               </nav>
             </div>
 

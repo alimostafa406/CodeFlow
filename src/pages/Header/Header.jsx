@@ -14,6 +14,7 @@ import img6 from '../../assets/images/imagewebdeveloper.png'
 import img7 from '../../assets/images/mobileApp.png'
 import img8 from '../../assets/images/imagemarktin.png'
 import img9 from '../../assets/images/imagedesign.jpeg'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const technologiesleft = [
@@ -40,7 +41,10 @@ const Header = () => {
       <ParticlesComponent id="particles" />
       <Navbar />
       <div className="absolute left-8 bottom-14 md:left-20 md:bottom-20 text-white z-40">
+        <Link to={'/contact'} >
         <Button variant="outlined" className="md:w-40 md:h-20 xs:w-32 xs:h-16">Contact Us</Button>
+        </Link>
+        
       </div>
 
       <div className='flex md:justify-around xs:justify-around items-center w-screen '>

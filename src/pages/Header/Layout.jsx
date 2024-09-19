@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import SideContext from '../../Context/SidebarContext'
-import LayoutNavbar from '../Layout/LayoutNavbar'
 import Footer from '../Footer/Footer'
 import Navbar from './Navbar'
 
