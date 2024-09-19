@@ -67,7 +67,6 @@ const Technologies = () => {
       <div className='animate-scroll-left '>
       <motion.div
         className='flex'
-        ref={containerRef}
         whileTap={{ cursor: 'grabbing' }} // Change cursor to grabbing on drag
         drag='x'
         dragConstraints={{ left: -500, right: 0 }} // Set constraints for horizontal drag
@@ -75,7 +74,7 @@ const Technologies = () => {
         {technologiesleft.map((tech, index) => (
           <motion.div
             key={index}
-            className={`technology-item m-4 technology-item-${index + 1}`}
+            className={`technology-item m-2 technology-item-${index + 1}`}
             whileHover={{ scale: 1.2, backgroundColor: '#007bff' }} // Scale and color change on hover
             transition={{ type: 'spring', stiffness: 300, damping: 10 }} // Smooth transition
             layout

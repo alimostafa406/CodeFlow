@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer>
+    <div>
+
+      <div className='w-screen h-[60vh] bg-white'>
+
+      </div>
+          <footer>
     <div className="bg-custom-dark opacity-70 py-4 text-gray-600">
       <div className="container md:px-4 mx-auto">
         <div className="-mx-4 flex flex-wrap justify-between text-white">
@@ -87,6 +92,7 @@ const Footer = () => {
       </div>
     </div>
   </footer>
+    </div>
   )
 }
 
