@@ -2,7 +2,6 @@ import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './pages/Header/Layout';
 import Services from './pages/Services/Services';
-import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Home from './pages/Home';
 import { useState } from 'react';

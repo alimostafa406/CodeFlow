@@ -4,7 +4,7 @@ import '../css/About.css'
 
 const HomeAbout = () => {
   return (
-    <div className="sm:flex items-center h-screen mx-auto bg-white">
+    <div className="sm:flex items-center min-h-screen mx-auto bg-white">
       <div className="sm:w-1/2 p-10">
         <div className="text-center">
           <img 

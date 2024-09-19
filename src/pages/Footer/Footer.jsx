@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div>
 
-      <div className='w-screen h-[60vh] bg-white'>
+      <div className='w-screen h-[40vh] bg-white'>
 
       </div>
           <footer>

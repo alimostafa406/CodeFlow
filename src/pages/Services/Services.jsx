@@ -33,9 +33,9 @@ const Services = () => {
         {/* Images Column */}
         <div className="services-grid xs:mb-30 ">
 
-        <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center image-container">
+        <div className=" rounded-lg shadow-md p-6 my-6 text-center image-container">
                 <img src={WebDeveloper} alt="Web Developer" className="w-full rounded-full mb-4"/>
-                <h3 className="text-xl font-semibold mb-2">Web Developer</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">Web Developer</h3>
         </div>
 
         <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center image-container">
@@ -48,9 +48,9 @@ const Services = () => {
                 <h3 className="text-xl font-semibold mb-2 mt-14">Marketing</h3>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center image-container">
+        <div className=" rounded-lg shadow-md p-6 my-6 text-center image-container">
                 <img src={MobileApp} alt="Mobile App" className="w-full rounded-full mb-14"/>
-                <h3 className="text-xl font-semibold mb-2">Mobile App</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">Mobile App</h3>
         </div>
 
         </div>

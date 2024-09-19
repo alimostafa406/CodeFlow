@@ -43,8 +43,8 @@ const Header = () => {
         <Button variant="outlined" className="md:w-40 md:h-20 xs:w-32 xs:h-16">Contact Us</Button>
       </div>
 
-      <div className='flex md:justify-around xs:justify-around items-center w-screen'>
-      <div className="relative transform -translate-x-1/2 -translate-y-1/2 text-white md:ml-32 w-fit xs:ml-10 flex flex-col items-center">
+      <div className='flex md:justify-around xs:justify-around items-center w-screen '>
+      <div className="relative transform -translate-x-1/2 -translate-y-1/2 text-white md:ml-32 w-fit xs:ml-10 flex flex-col items-center xs:hidden md:block">
   <h1 className="md:text-4xl font-bold typewriter xs:text-lg text-center">
     Welcome to Our Website
   </h1>
@@ -53,7 +53,7 @@ const Header = () => {
 
       <div className='flex '>
       <motion.div
-        className='flex flex-col animate-scroll-down md:block xs:hidden'
+        className='flex flex-col animate-scroll-down'
         whileTap={{ cursor: 'grabbing' }} // Change cursor to grabbing on drag
         drag='x'
         dragConstraints={{ left: -500, right: 0 }} // Set constraints for horizontal drag
