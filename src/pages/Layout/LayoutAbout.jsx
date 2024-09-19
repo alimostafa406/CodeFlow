@@ -17,7 +17,7 @@ const LayoutAbout = () => {
       </div>
         </div>
 
-        <div className=" bg-white text-xl h-[40vh]">
+        <div className=" bg-white text-xl h-[80vh]">
             {/* About Section */}
             <div className="about-content p-8 mb-20">
                 <div className="section-header mb-8 flex items-center">
@@ -40,7 +40,7 @@ const LayoutAbout = () => {
             </div>
         </div>
 
-        <div className="bg-cover bg-center w-screen h-[80vh] flex items-center justify-center" style={{ backgroundImage: `url(${bg2})` }}>
+        <div className="bg-cover bg-center w-screen h-full flex items-center justify-center" style={{ backgroundImage: `url(${bg2})` }}>
         <div className="story-section w-[100vw] relative flex justify-center items-center p-8">
                 <div className="story-content flex xs:flex-col md:flex-row gap-14 items-center justify-between min-w-[60vw] bg-black bg-opacity-50 p-8 rounded-lg">
                     <div className="story-text text-white max-w-md animate-slide-in-left">

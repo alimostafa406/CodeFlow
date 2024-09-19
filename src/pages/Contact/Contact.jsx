@@ -7,16 +7,16 @@ const ContactSection = () => {
             
             <section className="" id="contact">
             <ParticlesComponent id="particles"/>
-            <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-                <div className="mb-4">
+            <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20 mt-20">
+                <div className="mb-4 md:ml-40">
                     <div className="mb-6 max-w-3xl text-center">
-                        <p className="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200">
+                        <p className="text-base font-semibold tracking-wide text-blue-600 ">
                             Contact
                         </p>
                         <h2 className="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl">
                             Get in Touch
                         </h2>
-                        <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">
+                        <p className="mx-auto mt-4 max-w-3xl text-xl text-white">
                             In hac habitasse platea dictumst
                         </p>
                     </div>
@@ -24,7 +24,7 @@ const ContactSection = () => {
                 <div className="flex items-stretch justify-center">
                     <div className="grid md:grid-cols-2">
                         <div className="h-full pr-6">
-                            <p className="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
+                            <p className="mt-3 mb-12 text-lg text-white">
                             Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Let me know if you need more options or specific changes!.
                             </p>
                             <ul className="mb-6 md:mb-0">

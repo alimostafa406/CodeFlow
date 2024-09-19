@@ -13,7 +13,7 @@ const Services = () => {
     <div className="services-page min-h-screen">
       <ParticlesComponent id="particles"/> {/* Background Effect */}
 
-      <div className="services-content flex md:flex-row lg:flex-row xs:flex-col md:gap-28">
+      <div className="services-content flex md:flex-row lg:flex-row xs:flex-col md:gap-28 mt-40">
         {/* Text Column */}
 
 
