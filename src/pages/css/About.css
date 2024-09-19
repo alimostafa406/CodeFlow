@@ -46,3 +46,6 @@
     animation: slideInLeft 5s ;
 }
 
+.animate-slide-in-right {
+    animation: slideInRight 5s ;
+}

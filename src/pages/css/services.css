@@ -1,87 +1,107 @@
 /* Main container settings */
 .services-page {
-    position: relative;
-    width: 100%; /* Full page height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  position: relative;
+  width: 100%; /* Full page height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.services-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  width: 80%; /* Adjust width according to your layout needs */
+}
+
+/* Text block settings */
+.services-text {
+  flex: 1;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  padding-right: 20px;
+  animation-delay: 0.1s; /* Slight delay for text */
+}
+
+/* Grid layout for images */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  flex: 1;
+
+}
+
+.services-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px; /* Add padding to create space around the item */
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.services-item:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.services-item img {
+  width: 80px;
+  height: 80px; /* Fixed width and height to keep all images the same size */
+  object-fit: cover; /* Ensures that images are scaled to fit while maintaining aspect ratio */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.services-item p {
+  font-size: 16px;
+  text-align: center;
+  margin: 0; /* Remove any default margin */
+  padding-top: 10px; /* Add padding to create space between the image and text */
+  color: white;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0; /* Start transparent */
   }
-  
-  .services-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    width: 80%; /* Adjust width according to your layout needs */
+  100% {
+    transform: translateX(0); /* End at original position */
+    opacity: 1; /* Fully opaque */
   }
-  
-  /* Text block settings */
-  .services-text {
-    flex: 1;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    padding-right: 20px;
-    animation: slideInLeft 1s ease-out forwards;
-  }
-  
-  /* Grid layout for images */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    flex: 1;
-    animation: slideInRight 1s ease-out forwards;
-  }
-  .services-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px; /* Add padding to create space around the item */
-  }
-  
-  .services-item img {
-    width: 80px;
-    height: 80px; /* Fixed width and height to keep all images the same size */
-    object-fit: cover; /* Ensures that images are scaled to fit while maintaining aspect ratio */
-    margin-bottom: 10px; /* Space between image and text */
-  }
-  
-  .services-item p {
-    font-size: 16px;
-    text-align: center;
-    margin: 0; /* Remove any default margin */
-    padding-top: 10px; /* Add padding to create space between the image and text */
-    color: white;
-  }
-  
-  /* Keyframes for text sliding in from the left */
-  @keyframes slideInLeft {
-    0% {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Keyframes for images sliding in from the right */
-  @keyframes slideInRight {
-    0% {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
+}
+
+.image-container {
+  animation: slide-in 0.5s ease forwards; /* Animation for sliding in */
+}
+
+.image-container:nth-child(1) { animation-delay: 0.1s; }
+.image-container:nth-child(2) { animation-delay: 0.2s; }
+.image-container:nth-child(3) { animation-delay: 0.3s; }
+.image-container:nth-child(4) { animation-delay: 0.4s; }
+
+
+
+.image-container {
+  position: relative;
+  overflow: hidden; /* Ensures the hover effect doesn't overflow */
+}
+
+.image-container img {
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover img {
+  opacity: 0; /* Fade out the original image */
+}
+
+.image-container:hover .hover-image {
+  opacity: 1; /* Fade in the hover image */
+}

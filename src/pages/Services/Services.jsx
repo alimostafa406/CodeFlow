@@ -31,24 +31,24 @@ const Services = () => {
             </div>
 
         {/* Images Column */}
-        <div className="services-grid xs:mb-30">
+        <div className="services-grid xs:mb-30 ">
 
-        <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center">
+        <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center image-container">
                 <img src={WebDeveloper} alt="Web Developer" className="w-full rounded-full mb-4"/>
                 <h3 className="text-xl font-semibold mb-2">Web Developer</h3>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center">
+        <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center image-container">
                 <img src={Desginer} alt="Creative Design" className="w-full rounded-full mb-4"/>
                 <h3 className="text-xl font-semibold mb-2">Creative Design</h3>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center">
+        <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center image-container">
                 <img src={Marketing} alt="Marketing" className="w-full rounded-full mb-4"/>
                 <h3 className="text-xl font-semibold mb-2 mt-14">Marketing</h3>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center">
+        <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center image-container">
                 <img src={MobileApp} alt="Mobile App" className="w-full rounded-full mb-14"/>
                 <h3 className="text-xl font-semibold mb-2">Mobile App</h3>
         </div>
