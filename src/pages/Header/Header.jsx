@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+
 import Navbar from './Navbar';
 import ParticlesComponent from '../../Components/particles';
 import Button from '@mui/material/Button';
@@ -18,48 +18,22 @@ import img9 from '../../assets/images/imagedesign.jpeg'
 const Header = () => {
   const technologiesleft = [
     { id: 1, img: img1 },
-    { id: 1, img: img2 },
-    { id: 1, img: img3 },
-    { id: 1, img: img4 },
-    { id: 1, img: img5 },
+    { id: 2, img: img2 },
+    { id: 3, img: img3 },
+    { id: 4, img: img4 },
+    { id: 5, img: img5 },
     // Add more technology items here
   ];
 
   const technologiesRight = [
-    { id: 1, img: img2 },
-    { id: 1, img: img6 },
-    { id: 1, img: img7 },
-    { id: 1, img: img8 },
-    { id: 1, img: img9 },
+    { id: 6, img: img2 },
+    { id: 7, img: img6 },
+    { id: 8, img: img7 },
+    { id: 9, img: img8 },
+    { id: 10, img: img9 },
     // Add more technology items here
   ];
   
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    const scrollWidth = container.scrollWidth;
-    const viewportWidth = container.clientWidth;
-
-    // Auto-scroll animation configuration
-    const scrollAnimation = () => {
-      if (container) {
-        container.animate(
-          [
-            { transform: `translateX(0px)` },
-            { transform: `translateX(-${scrollWidth - viewportWidth}px)` }
-          ],
-          {
-            duration: 15000,
-            iterations: Infinity,
-            easing: 'linear'
-          }
-        );
-      }
-    };
-
-    scrollAnimation();
-  }, []);
 
   return (
     <div className="relative h-screen overflow-hidden flex">
@@ -69,16 +43,17 @@ const Header = () => {
         <Button variant="outlined" className="md:w-40 md:h-20 xs:w-32 xs:h-16">Contact Us</Button>
       </div>
 
-      <div className='flex justify-center items-center w-screen'>
-      <div className=" transform -translate-x-1/2 -translate-y-1/2 text-white">
-        <h1 className="md:text-4xl font-bold typewriter xs:text-lg">
-          Welcome to Our Website
-        </h1>
-      </div>
+      <div className='flex md:justify-around xs:justify-around items-center w-screen'>
+      <div className="relative transform -translate-x-1/2 -translate-y-1/2 text-white md:ml-32 w-fit xs:ml-10 flex flex-col items-center">
+  <h1 className="md:text-4xl font-bold typewriter xs:text-lg text-center">
+    Welcome to Our Website
+  </h1>
+</div>
 
+
+      <div className='flex '>
       <motion.div
-        className='flex flex-col'
-        ref={containerRef}
+        className='flex flex-col animate-scroll-down md:block xs:hidden'
         whileTap={{ cursor: 'grabbing' }} // Change cursor to grabbing on drag
         drag='x'
         dragConstraints={{ left: -500, right: 0 }} // Set constraints for horizontal drag
@@ -86,7 +61,7 @@ const Header = () => {
         {technologiesleft.map((tech, index) => (
           <motion.div
             key={tech.id}
-            className={`technology-item m-4  animate-scroll-up technology-item-${index + 1} `}
+            className={`technology-item m-4  technology-item-${index + 1} `}
             whileHover={{ scale: 1.2, backgroundColor: '#007bff' }} // Scale and color change on hover
             transition={{ type: 'spring', stiffness: 300, damping: 10 }} // Smooth transition
             layout
@@ -96,8 +71,7 @@ const Header = () => {
         ))}
       </motion.div>
       <motion.div
-        className='flex flex-col'
-        ref={containerRef}
+        className='flex flex-col animate-scroll-up'
         whileTap={{ cursor: 'grabbing' }} // Change cursor to grabbing on drag
         drag='x'
         dragConstraints={{ left: -500, right: 0 }} // Set constraints for horizontal drag
@@ -105,7 +79,7 @@ const Header = () => {
         {technologiesRight.map((tech, index) => (
           <motion.div
             key={tech.id}
-            className={`technology-item m-4  animate-scroll-up ml-10 technology-item-${index + 1} `}
+            className={`technology-item m-4  technology-item-${index + 1} `}
             whileHover={{ scale: 1.2, backgroundColor: '#007bff' }} // Scale and color change on hover
             transition={{ type: 'spring', stiffness: 300, damping: 10 }} // Smooth transition
             layout
@@ -114,6 +88,8 @@ const Header = () => {
           </motion.div>
         ))}
       </motion.div>
+      </div>
+
       </div>
 
     </div>

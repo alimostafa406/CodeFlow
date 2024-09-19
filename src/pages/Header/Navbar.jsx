@@ -1,14 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { FaBars } from 'react-icons/fa'; // Import hamburger icon
 import logo from '../../assets/images/logo.gif';
+import { Link } from 'react-router-dom';
+import SideContext from '../../Context/SidebarContext';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // State to handle menu toggle
+  const {toggleSidebar, open} = useContext(SideContext);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <div className="flex fixed z-20">
@@ -23,22 +22,23 @@ const Navbar = () => {
 
               {/* Burger Menu Icon */}
               <div className="md:hidden flex items-center mr-3">
-                <button onClick={toggleMenu} className="text-2xl">
+                <button onClick={toggleSidebar} className="text-2xl">
                   <FaBars />
                 </button>
               </div>
 
               {/* Navigation Links for Desktop */}
               <nav className="hidden md:flex space-x-6 mr-10 text-lg">
-                <a href="#" className="hover:text-indigo-400">Home</a>
-                <a href="#" className="hover:text-indigo-400">About</a>
-                <a href="#" className="hover:text-indigo-400">Services</a>
-                <a href="#" className="hover:text-indigo-400">Contact</a>
+                <Link to={"/"}><a href="#" className="hover:text-indigo-400">Home</a></Link>
+                <Link to={"/about"}><a href="#" className="hover:text-indigo-400">About</a></Link>
+                <Link to={"/services"}><a href="#" className="hover:text-indigo-400">Services</a></Link>
+                <Link to={"/technology"}><a href="#" className="hover:text-indigo-400">Technology</a></Link>
+                <Link to={"/contact"}><a href="#" className="hover:text-indigo-400">Contact</a></Link>
               </nav>
             </div>
 
             {/* Hidden Navigation Links for Mobile (Initially Empty) */}
-            <div className={`md:hidden fixed inset-0 bg-custom-dark opacity-90 flex flex-col items-center justify-center space-y-6 ${isOpen ? 'block' : 'hidden'}`}>
+            <div onClick={toggleSidebar} className={`md:hidden fixed inset-0 bg-custom-dark opacity-90 flex flex-col items-center justify-center space-y-6 ${open ? 'block' : 'hidden'}`}>
               {/* Empty Content */}
             </div>
           </div>

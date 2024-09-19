@@ -5,14 +5,13 @@ const SIDEBAR_LINKS = [
   { id: 1, path: "/", name: "Home" },
   { id: 2, path: "/about", name: "About" },
   { id: 3, path: "/services", name: "Services" },
-  { id: 4, path: "/contact", name: "Contact" },
-  { id: 4, path: "/section", name: "Section" },
   { id: 4, path: "/technology", name: "Technology" },
+  { id: 5, path: "/contact", name: "Contact" },
 ];
 
 const Sidebar = () => {
   return (
-    <div className="top-0 left-0 fixed z-20 bg-custom-dark text-white w-56 min-h-screen duration-300" id="sidebar">
+    <div className="top-0 left-0 fixed z-50 bg-custom-dark text-white w-56 min-h-screen duration-300" id="sidebar">
       <div className="p-4">
         <h1 className="text-2xl font-semibold">Dev Flow</h1>
         <nav className="flex-1 mt-4 ">

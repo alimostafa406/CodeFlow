@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
+import SideContext from '../../Context/SidebarContext'
 import Navbar from './Navbar'
-import Section from '../section/Section'
-import Services from '../Services/Services'
-import About from '../About/About'
-import Technologies from '../technology/technologies'
+import LayoutNavbar from '../Layout/LayoutNavbar'
+import Footer from '../Footer/Footer'
+
 
 const Layout = () => {
+const {open } = useContext(SideContext);
+
   return (
     <div className='h-screen overflow-auto'>
-      <Navbar/>
+      <LayoutNavbar/>
         <div className='w-full md-56 flex-row h-auto'>
+        {open? <Sidebar/> : null}
           <div className=''>
             <Outlet/>
+            <Footer/>
           </div>
         </div>
     </div>
