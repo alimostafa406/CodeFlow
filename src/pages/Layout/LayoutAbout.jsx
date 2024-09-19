@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../assets/images/logo.gif'
+import logos from '../../assets/images/logos.gif'
 import bg2 from '../../assets/images/bg2.jpg'
 import Button from '@mui/material/Button';
 import '../css/About.css'
@@ -12,19 +12,19 @@ const LayoutAbout = () => {
         <div className=" relative bg-cover bg-center h-[40vh]" style={{ backgroundImage: `url(${bg2})` }}>
         <div className="md:left-5 md:bottom-16 xs:left-5 xs:bottom-16 text-white absolute">
             <Link to={'/contact'}>
-            <Button variant="contained" className="md:w-40 md:h-20 xs:w-32 xs:h-16">Contact Us</Button>
+            <Button variant="contained" className="md:w-40 md:h-20 xs:w-32 xs:h-16">Know More</Button>
             </Link>
       </div>
         </div>
 
-        <div className=" bg-white text-xl">
+        <div className=" bg-white text-xl h-[40vh]">
             {/* About Section */}
             <div className="about-content p-8 mb-20">
                 <div className="section-header mb-8 flex items-center">
                     <hr className="w-8 border-2 border-[#0033cc] mr-4" />
                     <h1 className="text-[#0033cc] font-bold text-xl">About</h1>
                 </div>
-                <p className="section-text text-black mb-4">
+                <p className="section-text text-[#0033cc] mb-4">
                     DevFlow is a dynamic and innovative firm at the forefront of
                     development and consultancy services.
                 </p>
@@ -64,7 +64,7 @@ const LayoutAbout = () => {
                         </p>
                     </div>
                     <div className="logo-container text-right animate-slide-in-right logo-wave">
-                        <img src={logo} alt="DevFlow Logo" className="w-40 h-auto" />
+                        <img src={logos} alt="DevFlow Logo" className="w-40 h-auto" />
                     </div>
                 </div>
                 </div>

@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ParticlesComponent from '../../Components/particles'
 
 const Footer = () => {
   return (
     <div>
-
+      <ParticlesComponent id="particles" />
       <div className='w-screen h-[40vh] bg-white'>
 
       </div>

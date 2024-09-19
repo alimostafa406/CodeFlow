@@ -39,7 +39,7 @@ const Header = () => {
     <div className="relative h-screen overflow-hidden flex">
       <ParticlesComponent id="particles" />
       <Navbar />
-      <div className="absolute left-8 bottom-14 md:left-20 md:bottom-20 text-white">
+      <div className="absolute left-8 bottom-14 md:left-20 md:bottom-20 text-white z-40">
         <Button variant="outlined" className="md:w-40 md:h-20 xs:w-32 xs:h-16">Contact Us</Button>
       </div>
 

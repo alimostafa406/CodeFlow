@@ -1,8 +1,12 @@
 import React from 'react';
+import ParticlesComponent from '../../Components/particles';
 
 const ContactSection = () => {
     return (
-        <section className="bg-custom-dark dark:bg-slate-800" id="contact">
+        <div>
+            
+            <section className="" id="contact">
+            <ParticlesComponent id="particles"/>
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
                 <div className="mb-4">
                     <div className="mb-6 max-w-3xl text-center">
@@ -60,6 +64,7 @@ const ContactSection = () => {
                 </div>
             </div>
         </section>
+        </div>
     );
 };
 
