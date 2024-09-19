@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div>
       <ParticlesComponent id="particles" />
-      <div className='w-screen h-[40vh] bg-white'>
+      <div className=' h-[40vh] bg-white'>
 
       </div>
           <footer>

@@ -9,7 +9,7 @@ const LayoutAbout = () => {
   return (
     <div>
 
-        <div className=" relative bg-cover bg-center h-[40vh]" style={{ backgroundImage: `url(${bg2})` }}>
+        <div className=" relative bg-cover bg-center h-[60vh]" style={{ backgroundImage: `url(${bg2})` }}>
         <div className="md:left-5 md:bottom-16 xs:left-5 xs:bottom-16 text-white absolute">
             <Link to={'/contact'}>
             <Button variant="contained" className="md:w-40 md:h-20 xs:w-32 xs:h-16">Know More</Button>
@@ -17,7 +17,7 @@ const LayoutAbout = () => {
       </div>
         </div>
 
-        <div className=" bg-white text-xl h-[80vh]">
+        <div className=" bg-white text-xl h-fit flex justify-center items-center">
             {/* About Section */}
             <div className="about-content p-8 mb-20">
                 <div className="section-header mb-8 flex items-center">
@@ -40,7 +40,7 @@ const LayoutAbout = () => {
             </div>
         </div>
 
-        <div className="bg-cover bg-center w-screen h-full flex items-center justify-center" style={{ backgroundImage: `url(${bg2})` }}>
+        <div className="bg-cover bg-center w-screen h-screen flex items-center justify-center" style={{ backgroundImage: `url(${bg2})` }}>
         <div className="story-section w-[100vw] relative flex justify-center items-center p-8">
                 <div className="story-content flex xs:flex-col md:flex-row gap-14 items-center justify-between min-w-[60vw] bg-black bg-opacity-50 p-8 rounded-lg">
                     <div className="story-text text-white max-w-md animate-slide-in-left">
