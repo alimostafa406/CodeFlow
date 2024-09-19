@@ -11,3 +11,51 @@
     position: absolute;
     overflow: hidden;
   }
+
+/* Keyframes for the sliding animation */
+@keyframes slideInOut {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px); /* Move to the right */
+  }
+  100% {
+    transform: translateX(0); /* Return to original position */
+  }
+}
+
+.animated-header {
+  animation: slideInOut 3s ease-in-out infinite; /* 3s for the full animation cycle */
+}
+
+/* Keyframes for the typewriter effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Keyframes for the blinking cursor effect */
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: white;
+  }
+}
+
+/* Styling for the typewriter effect */
+.typewriter {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden; /* Hides the text that goes outside the container */
+  border-right: 0.15em solid white; /* Creates the cursor effect */
+  animation: typing 4s steps(30, end) infinite, blink 0.75s step-start infinite;
+  width: 0; /* Ensures the text starts from hidden */
+}
+

@@ -9,8 +9,9 @@
 
 .technologies-heading {
   font-size: 2.5rem;
-  margin-bottom: 40px;
   color: #333;
+  margin-bottom: 50px;
+  font-weight: 700;
 }
 
 .technologies-scroll {
@@ -98,8 +99,9 @@
 /* Apply animation to scrolling items */
 .scroll-left {
   display: flex;
-  animation: scrollLeft 30s linear infinite;
+  animation: scrollLeft 20s linear infinite;
 }
+
 
 /* Ensure items are displayed in a row and overflow hidden on wrapper */
 .wrapper {
@@ -117,3 +119,25 @@
   border-radius: 6px;
   margin-right: 16px; /* Adjust margin as needed */
 }
+
+
+/* Add this to your global CSS file or a CSS module */
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-right {
+  animation: scroll-right 20s linear infinite;
+}
+
+
